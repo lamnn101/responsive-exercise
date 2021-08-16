@@ -1,0 +1,187 @@
+@import "./reset";
+@import "./global";
+@import "./variable";
+@import "./mixin";
+
+// ===== Header ===== //
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $borderLight;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        height: 70px;
+    }
+    &__logo {
+        margin-right: auto;
+        img {
+            width: inherit;
+            height: inherit;
+        }
+        @media screen and (max-width: 767px) {
+            height: 30px;
+        }
+        @media screen and (max-width: 575px) {
+            height: 28px;
+        }
+    }
+    &__nav {
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+        a {
+            display: inline-block;
+            color: $black;
+            font-weight: 700;
+            text-transform: uppercase;
+            & + a {
+                margin-left: 40px;
+            }
+        }
+    }
+    &__burger {
+        cursor: pointer;
+        display: none;
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+    }
+}
+
+// ===== Banner ===== //
+
+.banner {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/banner.jpg);
+    background-size: cover;
+
+    &__inner {
+        padding: 139px 0;
+        @media screen and (max-width: 991px) {
+            padding: 100px 0;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 60px 0;
+        }
+        @media screen and (max-width: 575px) {
+            padding: 50px 0;
+        }
+    }
+    &__title {
+        color: $white;
+        font-size: 62px;
+        font-weight: 600;
+        letter-spacing: 5px;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 24px;
+        @media screen and (max-width: 991px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 44px;
+        }
+        @media screen and (max-width: 575px) {
+            letter-spacing: 2px;
+            font-size: 28px;
+        }
+    }
+    &__tagline {
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        max-width: 550px;
+        margin: 0 auto;
+        line-height: 30px;
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// ===== Skills ===== //
+
+.skills {
+    &__inner {
+        padding: 44px 0;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .skills__heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 44px;
+
+            .skills-heading__title {
+                font-size: 36px;
+                font-weight: 700;
+                letter-spacing: 3px;
+                text-align: center;
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 18px;
+                @media screen and (max-width: 991px) {
+                    font-size: 32px;
+                }
+                @media screen and (max-width: 767px) {
+                    font-size: 28px;
+                }
+                @media screen and (max-width: 575px) {
+                    font-size: 24px;
+                }
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-color: $black;
+                    width: 120px;
+                    height: 2px;
+                    margin-top: 18px;
+                }
+            }
+            .skills-heading__desc {
+                font-size: 16px;
+                line-height: 26px;
+                max-width: 700px;
+                text-align: center;
+                @media screen and (max-width: 767px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .skills__card-grid {
+            display: grid;
+            grid-gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+            @media screen and (max-width: 991px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width: 767px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .skills-card-grid__card {
+                max-width: 364px;
+                padding: 24px;
+                background-color: $white;
+                box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+                .card__label {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 12px;
+                }
+                .card__desc {
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}

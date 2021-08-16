@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #333333;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1172px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    max-width: 752px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 572px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+.header__logo img {
+  width: inherit;
+  height: inherit;
+}
+
+@media screen and (max-width: 767px) {
+  .header__logo {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header__logo {
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav a {
+  display: inline-block;
+  color: #333333;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header__nav a + a {
+  margin-left: 40px;
+}
+
+.header__burger {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .header__burger {
+    display: block;
+  }
+}
+
+.banner {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../img/banner.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/banner.jpg);
+  background-size: cover;
+}
+
+.banner__inner {
+  padding: 139px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .banner__inner {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner__inner {
+    padding: 60px 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner__inner {
+    padding: 50px 0;
+  }
+}
+
+.banner__title {
+  color: #ffffff;
+  font-size: 62px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 991px) {
+  .banner__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner__title {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .banner__title {
+    letter-spacing: 2px;
+    font-size: 28px;
+  }
+}
+
+.banner__tagline {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .banner__tagline {
+    font-size: 16px;
+  }
+}
+
+.skills__inner {
+  padding: 44px 0;
+}
+
+.skills__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills__content .skills__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 44px;
+}
+
+.skills__content .skills__heading .skills-heading__title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  .skills__content .skills__heading .skills-heading__title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills__content .skills__heading .skills-heading__title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .skills__content .skills__heading .skills-heading__title {
+    font-size: 24px;
+  }
+}
+
+.skills__content .skills__heading .skills-heading__title::after {
+  content: "";
+  display: block;
+  background-color: #333333;
+  width: 120px;
+  height: 2px;
+  margin-top: 18px;
+}
+
+.skills__content .skills__heading .skills-heading__desc {
+  font-size: 16px;
+  line-height: 26px;
+  max-width: 700px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .skills__content .skills__heading .skills-heading__desc {
+    font-size: 14px;
+  }
+}
+
+.skills__content .skills__card-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 24px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 991px) {
+  .skills__content .skills__card-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills__content .skills__card-grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.skills__content .skills__card-grid .skills-card-grid__card {
+  max-width: 364px;
+  padding: 24px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skills__content .skills__card-grid .skills-card-grid__card .card__label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.skills__content .skills__card-grid .skills-card-grid__card .card__desc {
+  line-height: 26px;
+}
+/*# sourceMappingURL=style.css.map */
